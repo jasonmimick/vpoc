@@ -1,0 +1,50 @@
+Varian RFP POC Plan
+-------------------
+
+6.1 Inbound ADT-A04 - Patient Registration
+
+ Components:
+	1) Inbound File HL7 Business Service
+	2) Routing Rule
+		If A04, intended sender, MSH.11, etc send along
+		Else	NACK
+	3) Data Transform - HL7.A04 to Varian
+		Lookup gender
+		Convert to Varian object model
+	4) Business Process
+		Call Varian Web Service, check patient exists
+		If YES, send to transform
+		Else call register web service
+	4) Data Transform - convert A04 to A08
+
+6.2 Outbound MDM
+
+ Components:
+	1) Define Web Service for Varian to call
+	2) Wrap as Business Service
+	3) Routing Rule to call #4
+	4) Data Transform
+		Convert Varian object to HL7 MDM-T02 message
+	5) Output HL7 File Operation
+
+6.3 Outbound DFT
+
+ Components:
+	Same as 6.2 with different Data Transform (Varian Object to HL7 DFT)
+
+6.4 Outbound Hprim Xml 
+
+ Components:
+	Same as 6.2 with different Data Transform (Varian Object to XML)
+	* Build object model of XML
+
+6.5 Configurable Insurance Processing
+
+	1) Persistent "Insurance Master" class
+		* we can use tns.InsuranceInfo types from WSDL?
+	2) API over insurances to check exists, insert, update, etc 
+	3) Custom Business Process - varian.InsuranceProcess
+		* setting for "Snapshot Own" or "Snapshot All"
+		* input original message and varian object
+		* output update varian object with insurance info
+
