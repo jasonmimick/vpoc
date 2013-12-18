@@ -1,0 +1,7 @@
+MSH|^~\&|SEND_HL7||RECV_HL7||200702231554||ADT^A04|000000347|P|2.5|||||||
+EVN|A04|20131128145709||||
+PID|1|PatientID2|PatientID1^^^^PI~PatientID2^^^^U||LastName^FirstName^^^Mr^^D~MaidenName^^^^^^M|MotherMaidenName|19330322|F||2131-1|123 Update Street^Floor 3- App 302^Palo Alto^CA^90878^2^H~454 Main Street ^Hotel Central  ^Paris^^75015^FRA^C~^^Lyon^^^100^BDL||(555)444-2222^PRN^PH~(254)22558899^PRS^CP|(555)455-2222^WPN^PH^|PL^Polish|M||12355|111111111|||||||||||N
+NK1|1|Contact^One^""|SPO|123 Update Street^""^Palo Alto^CA^90878^2^^^""^|(555)444-2222^^^|(555)466-2222^^^|||||||||||||||||||||||||||||||
+PV1|1|I|2333^1245^^00016^^^^^|R||||DOC-ID^DocName^DocFirstName||||||||||A|12355|||||||||||||||||||||||||20131119160652||||||||
+IN1|1|1|00N|Test Group Plan|P O Box 64143^""^New Heans^LB^6090^^^^^||3402929902^^^|111-2||||20070223|""||M|TEST^111^""|OWN|19330322|123 Update Street^""^Palo Alto^California^90878^""^^^""^|||||||||||||||||2222|""||||||||||||
+
